@@ -1,11 +1,16 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+
+import { Provider } from 'react-redux';
+
+import AppContainer from './src/navigator';
+
+import store from './src/utils/store';
 
 const App = () => {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Henri Mobile Interview Project</Text>
-    </View>
+    <Provider store={store}>
+      <AppContainer />
+    </Provider>
   )
 }
 
